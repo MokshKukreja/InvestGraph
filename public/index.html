@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade minds</title>
+  <link rel="icon" href="/public/images/LOGO.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+
+<body>
+  <nav>
+    
+      <h3>InvestGraph</h3>
+      <ul>
+        <li>Crypto</li>
+        <li>Trade</li>
+        <li>Markets</li>
+        <!-- <li>More</li> -->
+      <img src="./images/bookmark.png" alt="" id="menu-icon">
+      </ul>
+
+  </nav> 
+  <div id="side-screen">
+    <!-- Content of your side screen goes here -->
+    <div class="close-icon-container">
+        <img src="./images/close.png" alt="" id="close-icon">
+        <div class="watch-list">
+        </div>
+    </div>
+    <!-- Additional content goes here -->
+</div>
+  <div class="chart-container">
+
+
+    <div class="left-container">
+
+      <table cellspacing="20">
+        <tr>
+          <td class="first">Open:</td>
+          <td class="open second"></td>
+        </tr>
+        <tr>
+          <td class="first">High:</td>
+          <td class="high second"></td>
+        </tr>
+        <tr>
+          <td class="first">Low:</td>
+          <td class="low second"></td>
+        </tr>
+        <tr>
+          <td class="first">Close:</td>
+          <td class="close second"></td>
+        </tr>
+        <tr>
+          <td class="first">Volume:</td>
+          <td class="vol second"></td>
+        </tr>
+        <tr>
+          <td class="first">QAV:</td>
+          <td class="qav second"></td>
+        </tr>
+        <tr>
+          <td class="first">Trades:</td>
+          <td class="trades second"></td>
+        </tr>
+        <tr>
+          <td class="first">BAV:</td>
+          <td class="bav second"></td>
+        </tr>
+      </table>
+    </div>
+
+
+    <div class="right-container">
+
+      <div class="button-area">
+        <div class="right-button-side">
+          
+          <form action="/search" method="post">
+            <select id="inputElement">
+              <option value="BTCUSDT" class="selStock">BTCUSDT</option>
+              <option value="ETHUSDC">ETHUSDC</option>
+              <option value="BTCFDUSD">BTCFDUSD</option>
+              <option value="ACMUSDT">ACMUSDT</option>
+              <option value="XRPBTC">XRPBTC</option>
+              <option value="EOSBTC">EOSBTC</option>
+              <option value="LTCBTC">LTCBTC</option>
+            </select>
+          </form>
+       
+        <button data-value="1s">1s</button>
+        <button class="selected" data-value="1m">1m</button>
+        <button data-value="15m">15m</button>
+        <button data-value="1H">1h</button>
+        <button data-value="4H">4h</button>
+        <button data-value="1D">1d</button>
+        <button data-value="1W">1w</button>
+       
+        </div>
+
+        <div class="left-button-side">
+          <h2 class="coin-name">BTCUSDT</h2>
+          <button class="heart-btn"></button>
+        </div>
+
+      </div>
+
+      
+      <div id="tvchart"></div>
+    </div>
+
+
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sideScreen = document.getElementById('side-screen');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuIcon.addEventListener('click', function() {
+        sideScreen.style.right = '0'; /* Show side screen */
+    });
+
+    closeIcon.addEventListener('click', function() {
+        sideScreen.style.right = '-230px'; /* Hide side screen */
+    });
+});
+
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+<script src="client.js"></script>
+</script>
+</html>
