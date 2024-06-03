@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-y: hidden;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	background: linear-gradient(to right, #141e30, #243b55);
+	color: #fff;
+}
+
+a {
+	color: #8c7be6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #5f0099;
+}
+
+h1, h2, h3 {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+h4, h5 {
+	font-weight: 600;
+}
+
+h6 {
+	font-weight: 500;
+}
+
+.navbar {
+	position: fixed;
+	right: 0;
+	left: 0;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	min-height: 50px;
+	line-height: 50px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1030;
+	border-radius: 10px; /* Add border-radius */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+}
+
+.navbar .active {
+	color: #5f0099 !important;
+}
+
+.navbar .navbar-brand {
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.btn {
+	padding: 12px 22px;
+	border-radius: 10px;
+	background-color: #222f45; /* Change button color to match SVG */
+	color: #fff;
+	border: none;
+	font-size: 20px;
+	outline: none;
+	transition: background-color 0.3s ease;
+	margin-top: 10px;
+}
+
+.btn:hover {
+	background-color: #333; /* Change button hover color */
+	border: none;
+	outline: none;
+}
+
+.banner {
+	background: linear-gradient(to right, #1d2635, #0b1b2c);
+	padding: 100px 0px 300px;
+	position: relative;
+}
+
+.banner-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	height: 100vh;
+}
+
+.banner a.weblink {
+	color: #ffffff;
+	border-bottom: 1px dotted #ffffff;
+	padding-bottom: 3px;
+}
+
+.banner a.weblink:hover {
+	color: #5f0099;
+	border-bottom: 1px dotted #5f0099;
+}
+
+.banner .banner-text h2 {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 60px;
+	margin-bottom: 25px;
+}
+
+.banner .banner-text h6 {
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 500;
+}
+
+.banner .banner-text p {
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.banner img {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.svg-wave img {
+	position: absolute;
+	bottom: -35px;
+	z-index: 0;
+	position: fixed;
+}
+
+@media (max-width: 767px) {
+	.banner-text h2 {
+		font-size: 28px;
+		line-height: 40px;
+	}
+	.banner-text p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+.banner-container {
+	margin-top: 80px;
+}

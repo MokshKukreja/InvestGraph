@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #282c35;
+  /* background-color: #282c35; */
+  background: linear-gradient(to right, #232d3d, #0d1f31);
   font-family: Arial, sans-serif;
   color: #eaecef;
   transition: background-color 0.3s ease;
